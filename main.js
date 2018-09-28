@@ -56,7 +56,7 @@ if (cluster.isMaster) {
         file.on('error', function(error){
             res.writeHead(404, {"Content-Type" : "text/html"});
             return res.end("404 not found");
-          })
+        });
 
         file.pipe(htmlstream_handle).pipe(res);
     });
